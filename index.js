@@ -30,7 +30,7 @@ const QuizList = [ {
   Correct_Option: "A"
   }]                
 function quiz(QuizList){
-const userInput=readLineSync.question(`${QuizList.id}. ${QuizList.question}\n${QuizList.options.join('\n')}\nType your Option : `);
+  const userInput=readLineSync.question(`${QuizList.id}. ${QuizList.question}\n${QuizList.options.join('\n')}\nType your Option : `);
   if(userInput===QuizList.Correct_Option){
     score++;
     console.log("Correct Answer");
