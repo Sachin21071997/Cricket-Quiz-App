@@ -1,5 +1,6 @@
 const readLineSync=require('readline-sync');
-const QuizList = [ {
+const QuizList = [ 
+  {
   id : 1,
   question: "How long is the wicket on a cricket pitch?",
   options: ["A: 18 yards", "B: 20 yards", "C: 22 yards","D: 24 yards"],
@@ -42,13 +43,12 @@ function quiz(QuizList){
     console.log( `Wrong Answer\nCorrect Answer is ${QuizList.Correct_Option}`);
   }
 }
-console.log("Welcome to the Annual Cricket Quiz");
-let wanna_play = readLineSync.question('Do u want to play Cricket Quiz\nYes \\ No\n');
+let wanna_play = readLineSync.question('Welcome to the Annual Cricket Quiz\nDo u want to play Cricket Quiz\nYes \\ No\n');
 let score=0;
 while(wanna_play==="Yes"){
   QuizList.forEach(quiz);
   console.log(`Your Total Score is ${score}/${QuizList.length}`);
-  if(score==QuizList.length){
+  if(score===QuizList.length){
     console.log("You are expert in Cricket");
   }
   else if(score>QuizList.length/2){
